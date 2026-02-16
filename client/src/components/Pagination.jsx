@@ -16,8 +16,7 @@ const Pagination = ({ page, pages, onPageChange }) => {
 
   return (
     <div className="flex items-center justify-center space-x-2 mt-8">
-      <button
-        onClick={() => onPageChange(page - 1)}
+      <button onClick={() => onPageChange(page - 1)}
         disabled={page <= 1}
         className="px-3 py-2 border rounded-lg text-sm disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50 transition"
       >
