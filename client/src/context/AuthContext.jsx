@@ -57,9 +57,12 @@ export const AuthProvider = ({ children }) => {
 
   const updateProfile = async (profileData) => {
     const { data } = await API.put('/auth/profile', profileData);
-    const updated = { ...user, ...data };
-    setUser(updated);
-    localStorage.setItem('user', JSON.stringify(updated));
+    setUser((prev) => {
+      if (!prev) return null;
+      const updated = { ...prev, ...data };
+      localStorage.setItem('user', JSON.stringify(updated));
+      return updated;
+    });
     return data;
   };
 

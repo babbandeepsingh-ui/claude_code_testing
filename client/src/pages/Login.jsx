@@ -10,7 +10,9 @@ const Login = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-  const redirect = location.search ? location.search.split('=')[1] : '/';
+  const params = new URLSearchParams(location.search);
+  const redirectParam = params.get('redirect');
+  const redirectTo = redirectParam && redirectParam.startsWith('/') ? redirectParam : '/';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,7 +20,7 @@ const Login = () => {
     try {
       await login(email, password);
       toast.success('Login successful!');
-      navigate(redirect);
+      navigate(redirectTo);
     } catch (error) {
       toast.error(error.response?.data?.message || 'Login failed');
     } finally {
@@ -70,7 +72,7 @@ const Login = () => {
 
         <p className="text-center text-sm text-gray-500 mt-6">
           Don't have an account?{' '}
-          <Link to={`/register${redirect !== '/' ? `?redirect=${redirect}` : ''}`} className="text-indigo-600 hover:underline font-medium">
+          <Link to={`/register${redirectTo !== '/' ? `?redirect=${encodeURIComponent(redirectTo)}` : ''}`} className="text-indigo-600 hover:underline font-medium">
             Sign Up
           </Link>
         </p>
