@@ -88,12 +88,21 @@ const ProductDetail = () => {
       {/* Product Info */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
         <div className="rounded-xl overflow-hidden bg-white border">
-          <img
-            src={product.image || '/placeholder.svg'}
-            alt={product.name}
-            onError={(e) => { e.target.onerror = null; e.target.src = '/placeholder.svg'; }}
-            className="w-full h-96 md:h-[500px] object-cover"
-          />
+          {product.image ? (
+            <img
+              src={product.image}
+              alt={product.name}
+              className="w-full h-96 md:h-[500px] object-cover"
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Crect fill='%23f3f4f6' width='400' height='400'/%3E%3Ctext fill='%239ca3af' x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='18'%3ENo image%3C/text%3E%3C/svg%3E";
+              }}
+            />
+          ) : (
+            <div className="w-full h-96 md:h-[500px] flex items-center justify-center bg-gray-100 text-gray-400 text-lg">
+              No image
+            </div>
+          )}
         </div>
 
         <div>

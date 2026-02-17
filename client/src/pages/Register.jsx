@@ -30,7 +30,9 @@ const Register = () => {
   const { register, sendOtp, verifyOtp, googleSSO } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-  const redirect = location.search ? location.search.split('=')[1] : '/';
+  const params = new URLSearchParams(location.search);
+  const redirectParam = params.get('redirect');
+  const redirectTo = redirectParam && redirectParam.startsWith('/') ? redirectParam : '/';
 
   // Detect input type as user types
   useEffect(() => {
@@ -61,13 +63,13 @@ const Register = () => {
     try {
       await googleSSO(response.credential);
       toast.success('Account created successfully!');
-      navigate(redirect);
+      navigate(redirectTo);
     } catch (error) {
       toast.error(error.response?.data?.message || 'Google sign-in failed');
     } finally {
       setLoading(false);
     }
-  }, [googleSSO, navigate, redirect]);
+  }, [googleSSO, navigate, redirectTo]);
 
   useEffect(() => {
     if (!GOOGLE_CLIENT_ID) return;
@@ -138,7 +140,7 @@ const Register = () => {
     try {
       await register(name, identifier.trim(), password);
       toast.success('Account created successfully!');
-      navigate(redirect);
+      navigate(redirectTo);
     } catch (error) {
       toast.error(error.response?.data?.message || 'Registration failed');
     } finally {
@@ -170,7 +172,7 @@ const Register = () => {
     try {
       await verifyOtp(name, identifier.trim(), otp);
       toast.success('Account created successfully!');
-      navigate(redirect);
+      navigate(redirectTo);
     } catch (error) {
       toast.error(error.response?.data?.message || 'OTP verification failed');
     } finally {
@@ -362,7 +364,7 @@ const Register = () => {
 
         <p className="text-center text-sm text-gray-500 mt-6">
           Already have an account?{' '}
-          <Link to={`/login${redirect !== '/' ? `?redirect=${redirect}` : ''}`} className="text-indigo-600 hover:underline font-medium">
+          <Link to={`/login${redirectTo !== '/' ? `?redirect=${encodeURIComponent(redirectTo)}` : ''}`} className="text-indigo-600 hover:underline font-medium">
             Sign In
           </Link>
         </p>
