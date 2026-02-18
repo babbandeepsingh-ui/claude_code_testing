@@ -1,0 +1,159 @@
+.header-section {
+    padding: 15px 100px;
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    &.home-header{
+        background: $white;
+    }
+    &-inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @extend %poppins;
+        @extend %containerWidth;
+    }
+    .logo-box{
+        position: relative;
+        z-index: 0;
+    }
+    .navigation{
+        @include transition(.3s ease-in-out);
+        .menu{
+            display: flex;
+            &-item{
+                margin: 0 15px;
+                position: relative;
+                &.active:after{
+                    content: '';
+                    width: 22px;
+                    height: 3px;
+                    background: $primary_color;
+                    @include centerdiv;
+                    top: 135%;
+                }
+                a{
+                    display: block;
+                    color: $black;
+                    font-weight: 600;
+                    @include transition(.3s all);
+                    &:hover{
+                        color: $primary_color;
+                    }
+                }
+                &.has-child{
+                    padding-right: 20px;
+                    &:before{
+                        content: '';
+                        background-image: url(/images/down-chevron.svg);
+                        width: 10px;
+                        height: 7px;
+                        position: absolute;
+                        right: 0;
+                        top: 8px;
+                        @include bgimagecontain;
+                    }
+                }
+            }
+            .sub-menu{
+                display: none;
+            }
+        }
+    }
+    .breadcrumb-box{
+        position: relative;
+        z-index: 99;
+        color: $black;
+        font-weight: 600;
+        cursor: pointer;
+        span{
+            margin-right: 10px;
+        }
+    }
+}
+
+.secondary-menu {
+    position: fixed;
+    right: -530px;
+    top: 0;
+    width: 530px;
+    height: 100vh;
+    background: $white;
+    z-index: 999;
+    opacity: 0;
+    @include transition(.5s all);
+    &-inner {
+        padding: 40px;
+        height: 100%;
+        overflow-y: auto;
+    }
+    .close-icon{
+        text-align: right;
+        margin-right: 62px;
+        margin-top: -15px;
+        span{
+            cursor: pointer;
+        }
+    }
+    .menu{
+        padding-top: 10px;
+        .menu-item{
+            margin-bottom: 18px;
+            a{
+                font-size: 22px;
+                color: $black;
+                @extend %poppins;
+                font-weight: 600;
+            }
+        }
+    }
+    .social-list {
+        position: absolute;
+        bottom: 40px;
+        text-align: center;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        left: 0;
+        gap: 25px;
+        .social-item{
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+.menu-show{
+    position: relative;
+    overflow: hidden;
+    &:before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: rgb(0 0 0 / 75%);
+        @include centerdiv;
+        z-index: 99;
+    }
+    .secondary-menu{
+        opacity: 1;
+        right: 0;
+    }
+    .banner-section{
+        height: 100vh;
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .menu-show .secondary-menu {
+        width: 100%;
+        .close-icon {
+            margin-right: 0;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+.about-us-india-section{
+    @extend %commonCircles;
+    &:after{
+        top: 470px;
+        left: -350px;
+    }
+    &-inner{
+        padding: 150px 50px;
+        display: flex;
+        justify-content: space-between;
+        @extend %containerWidth;
+    }
+    .content-box{
+        width: 60%;
+        padding-right: 120px;
+        .title{
+            font-size: 42px;
+            color: $black;
+            font-weight: 800;
+            margin-bottom: 25px;
+        }
+        p{
+            @extend %poppins;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+    }
+    .image-box{
+        img{
+            border-radius: 30px;
+        }
+    }
+}
+
+.about-us-india-management{
+    padding-bottom: 0
+}
+
+.about-us-india-section3{
+    &-inner{
+        padding: 50px 0;
+        display: flex;
+        justify-content: space-between;
+        @extend %containerWidth;
+    }
+    .box{
+        width: 32%;
+        @extend %poppins;
+        .title{
+            color: $white;
+            margin-bottom: 0;
+            margin-top: 30px;
+        }
+        span{
+            color: $white;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        &-inner{
+            @include bgimagecover;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0;
+            height: 100%;
+            .box-content{
+                margin-bottom: 0;
+                width: 100%;
+                height: 100%;
+                a{
+                    display: block;
+                    padding: 80px 30px;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .box1{
+        padding-right: 0;
+        .box-inner{
+            background-image: url(/images/management-team-image.png);
+        }
+    }
+    .box2{
+        .box-inner{
+            background-image: url(/images/ipo_prospectus_image.png);
+            background-size: cover;
+            svg .a{
+                fill: $white;
+            }
+        }
+        .title{
+            color: $white;
+        }
+    }
+    .box3{
+        .box-inner{
+            background-image: url(/images/press_release.png);
+        }
+    }
+}

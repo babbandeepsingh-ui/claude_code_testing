@@ -1,0 +1,64 @@
+@media only screen and (max-width: 1099px){
+    .banner-section .content-box {
+        width: 100%;
+        padding: 0 15px;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+    }
+    
+    %title_style_1,.banner-section .content-box .title,.about-section1 .stats-box .stats-item .numbers{
+        font-size: 42px;
+    }
+    .ad-solution-section .box-section .box .list-style .list-item {
+        font-size: 17px;
+    }
+    .ad-solution-section .title-section p,.banner-section .content-box p,.growth-section p,.stats-section-inner .title-section p{
+        font-size: 15px;
+    }
+    .stats-section .stats-box .title,.management-section .title-text,.investor-section .title-text,.investor-relation-section .section1 .left-section .title,.investor-relation-section .section-box .box .title,.ir-section4 .section-box .box .title {
+        font-size: 26px;
+    }
+    .footer-section{
+        .footer-box1 .footer-box-inner {
+            padding-left: 0;
+            padding-right: 100px;
+        }
+    }
+    .about-section1 .stats-box .stats-item .numbers{
+        margin-bottom: 0;
+    }
+    .contact-section1-inner{
+        .form-section {
+            width: 65%;
+            padding-right: 50px;
+        }
+        .address-section {
+            width: 35%;
+            padding-left: 0;
+            &-inner{
+                padding: 30px;
+            }
+        }
+    }
+    .accordion .accordion-body ul {
+        justify-content: space-between;
+        li{
+            width: 45%;
+            margin-right: 0;
+        }
+    }
+    
+    // .media-section1 .tab-content .tab-pane-inner {
+    //     gap: 30px;
+    // }
+
+    .address-location-section{
+        padding-left: 30px;
+        .office-address-content{
+            .image {
+                width: 45%;
+            }
+        }
+    }
+}

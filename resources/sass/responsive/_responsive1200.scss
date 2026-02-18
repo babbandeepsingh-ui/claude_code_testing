@@ -1,0 +1,67 @@
+@media only screen and (max-width: 1200px){
+	%containerWidth{
+		max-width: 1170px;
+		margin: 0 auto;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	%padding_style_1,.what-we-do,.newsletter-section,.footer-section,.header-section,.irc-section{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.banner-section .content-box{
+		width: 48%;
+	}
+	.stats-section-inner .title-section,.ad-solution-section .title-section,.footer-section-inner,.footer-section .footer-section-bottom{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.corporate-governance-inner .accordion .accordion-header button {
+		font-size: 22px;
+	}
+	.about-us-india-section-inner {
+		padding: 120px 15px;
+	}
+	.about-us-india-section3{
+		padding: 50px 15px;
+	}
+	.blogdetail-page-section-inner {
+		padding: 70px 20px;
+	}
+	.post-section-inner{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.discover-identify-banner .content-box p {
+		margin-bottom: 100px;
+	}
+	.image-text-section-inner .content-box{
+		.title span {
+			display: inline;
+		}
+		.box1 {
+			padding: 100px 20px;
+		}
+	}
+	.image-text-section-alternative .image-text-section-inner:nth-child(even) .content-box .box1 {
+		padding: 100px 20px;
+	}
+	.digital-transformation-section3 .image-text-section-inner .content-box .box1 {
+		padding: 80px 20px;
+	}
+	.ad-solution-section .box-section .box-inner .image {
+		width: auto;
+	}
+	.growth-section .content-box{
+		&-inner{
+			&:nth-child(even){
+				.content-box-details-inner{
+					padding: 0 80px 0 0;
+				}
+			}
+		}
+		.content-box-details-inner {
+			padding: 0 0 0 80px;
+		}
+	}	
+}

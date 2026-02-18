@@ -1,0 +1,384 @@
+@media only screen and (max-width: 991px){
+    .banner-section .content-box .title, .ad-solution-section .title-section .title, .growth-section .title-section .title, .stats-section-inner .title-section .title, .testimonial-section .title, .awards-section .title,.our-platform-section .title,.ad-campaigns-section .content-box .title {
+        font-size: 36px;
+    }
+    .ad-solution-section .box-section .box .title {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+    .stats-section .stats-box{
+        margin-bottom: 70px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    .footer-section{
+        &-inner{
+            flex-wrap: wrap;
+        }
+        .footer-box1 {
+            width: 100%;
+            .footer-box-inner {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+        .footer-box2,.footer-box3{
+            width: 50%;
+            .footer-box-inner{
+                padding-left: 0;
+            }
+        }
+    }
+    .ad-solution-section{
+        .box-section{
+            flex-direction: column;
+            .box{
+                width: 100%;
+                margin-bottom: 70px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                .list-style .list-item{
+                    font-size: 14px;
+                    img {
+                        margin-left: 5px;
+                        width: 20px;
+                    }
+                }
+                &-inner .image {
+                    width: max-content;
+                }
+            }
+        }
+    }
+    .our-platform-section .platforms-logo .box {
+        width: 50%;
+    }
+    .work-place-section {
+        padding: 70px 20px 20px;
+    }
+
+    .ad-campaigns-section-inner {
+        flex-direction: column;
+        .content-box{
+            width: 100%;
+            padding: 0;
+            margin-bottom: 50px;
+        }
+        .image-box{
+            padding: 0 0 0 15px;
+            width: 100%;
+            .image img{
+                width: 100%;
+            }
+        }
+    }
+
+    .newsletter-section-inner {
+        background-position: left;
+    }
+    .management-section .members-list-item {
+        width: 50%;
+        padding: 12px 12px 20px;
+    }
+    .our-business-section .advertisers-box {
+        flex-direction: column;
+        .text-section{
+            width: 100%;
+            text-align: center;
+        }
+        .image-section{
+            width: 100%;
+            .logo-list {
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+    }
+    .contact-section1{
+        &:before {
+            height: 72%;
+            opacity: .5;
+        }
+        &-inner{
+            padding-bottom: 70px;
+            .form-section {
+                width: 100%;
+                padding-right: 15px;
+                .title{
+                    margin-bottom: 30px;
+                }
+            }
+            .address-section {
+                width: 100%;
+                padding-left: 0;
+                margin-top: 60px;
+                &-inner{
+                    .details{
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        &-inner{
+                            width: 48%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .address-location-section {
+        padding-top: 70px;
+        padding-left: 0;
+        .address-box-item {
+            width: 50%;
+            padding: 15px 15px 30px;
+            .address span{
+                display: inline;
+            }
+        }
+    }
+    .accordion .accordion-body ul li {
+        width: 100%;
+        margin-right: 0;
+        &:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        &:after {
+            width: 25px;
+            height: 25px;
+        }
+    }
+    .investor-relation-section {
+        .section-box{
+            flex-direction: column;
+            .box {
+                width: 100%;
+            }
+            .left-section {
+                padding-right: 0;
+                padding-top: 0;
+                padding-bottom: 40px;
+            }
+        }
+        .section2 {
+            .box-inner{
+                height: 270px;
+            }
+            .box1,.box {
+                padding-right: 0;
+                margin-bottom: 40px;
+                .title span{
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .financial-details-section .tab-content .download-links li {
+        width: 100%;
+        margin-right: 0;
+    }
+    .exchange-announcements-section .content-box-section {
+        flex-direction: column;
+        .box{
+            width: 100%;
+            margin-bottom: 70px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .ir-section4 .section-box,.irc-section .box-section{
+        flex-direction: column;
+        .box{
+            width: 100%;
+            margin-bottom: 40px;
+            .title span {
+                display: inline-block;
+            }
+            &-inner{
+                height: 270px;
+            }
+        }
+    }
+    .irc-section .box-section .box-inner{
+        height: auto;
+    }
+    .irc-section .box-section .box-item span{
+        display: inline-block;
+    }
+    // .media-section1 .tab-content .tab-pane-inner .media-item {
+    //     flex: 1 1 45%;
+    // }
+    .media-section1 .tab-content .tab-pane-inner .media-item{
+        width: 48%;
+        margin: 0 4% 4% 0;
+        &:nth-child(3n){
+            margin-right: 4%;
+        }
+        &:nth-child(2n){
+            margin-right: 0;
+        }
+    }
+    .management-section .modal-lg {
+        max-width: 95%;
+    }
+
+    .image-text-section-inner .content-box{
+        .box {
+            width: 100%;
+        }
+        .box2 {
+            display: none;
+        }
+    }
+    .discover-identify-banner{
+        padding-bottom: 60%;
+        .content-box{
+            p{
+                margin-bottom: 70px;
+            }
+        }
+    }
+    .office-address {
+        .office-address-content{
+            .address-detail{
+                min-width: 400px;
+                width: 400px;
+                height: 400px;
+                padding-left: 130px;
+                .name{
+                    font-size: 16px;
+                }
+                p{
+                    font-size: 11px;
+                }
+            }
+            .image {
+                width: 50%;
+            }
+            .tab-pane{
+                height: 100%;
+                &-inner{
+                    height: 100%;
+                }
+            }
+        }
+        .office-address-list .nav-item {
+            align-items: baseline;
+        }
+    }
+    .culture-section .box-section .box{
+        padding: 15px;
+    }
+
+    .join-team-section-inner {
+        padding: 100px 20px;
+        flex-wrap: wrap;
+        .box{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        .box1{
+            margin-bottom: 70px;
+            .box-inner{
+                padding-right: 0;
+            }
+        }
+        .box2{
+            .box-inner{
+                padding-left: 20px;
+                &:before{
+                    left: 0;
+                }
+            }
+        }
+    }
+    .about-us-india-section-inner {
+        flex-wrap: wrap;
+        .content-box {
+            width: 100%;
+            padding-right: 0;
+            margin-bottom: 50px;
+        }
+        .image-box{
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .about-section1 .about-carousel-section {
+        width: 100%;
+        margin: 70px 0 0 auto;
+        max-width: 950px;
+        padding: 0 20px;
+        .owl-stage-outer {
+            border-radius: 25px;
+        }
+    }
+    .about-us-india-section3-inner{
+        flex-wrap: wrap;
+        align-items: center;
+        .box{
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .box-inner .box-content a{
+            display: flex;
+            min-height: 300px;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .title{
+                margin-top: 0;
+            }
+        }
+    }
+    .blog-page-section {
+        .content-section {
+            width: 100%;
+            padding-right: 0;
+        }
+        .sidebar-section {
+            width: 100%;
+            padding-left: 0;
+        }
+    }
+    .blogdetail-page-section-inner{
+        .title {
+            font-size: 32px;
+        }
+        .content .blog-content {
+            .text {
+                padding: 30px 0;
+            }
+            .text.categories{
+                padding: 0;
+            }
+        }
+        .form-section{
+            padding: 0;
+        }
+    }
+    .post-section .blog-list .blog-item {
+        width: 48.5%;
+    }
+    .growth-section .content-box .content-box-details-inner,.growth-section .content-box-inner:nth-child(even) .content-box-details-inner {
+        padding: 0;
+    }
+    .digital-transformation-section3 .image-text-section-inner .box1 {
+        padding: 80px 20px;
+    }
+    .about-section1-inner{
+        .title br{
+            display: none;
+        }
+    }
+
+    .contact-section1 .banner-bottom{
+        display: none;
+    }
+}

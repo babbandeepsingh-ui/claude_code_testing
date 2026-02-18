@@ -1,0 +1,90 @@
+%manrope{
+	font-family: 'Manrope', sans-serif;
+}
+
+%poppins{
+	font-family: 'Poppins', sans-serif;
+}
+
+body{
+	font-size: 14px;
+	@extend %manrope;
+	color: $black_light;
+	font-weight: normal;
+}
+
+a{
+	text-decoration: none;
+	&:hover{
+		text-decoration: none;
+		color: $primary_color;
+	}
+	&.active{
+		color: $primary_color;
+	}
+}
+
+ul,ol{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul.list-style {
+    list-style: disc;
+    padding-left: 40px;
+}
+
+ol.list-style {
+    list-style: decimal;
+    padding-left: 40px;
+}
+
+a.btn, .btn,input.btn,button{
+	color: $white;
+	padding: 16px 30px;
+    font-weight: 500;
+    border: none;
+	font-size: 16px;
+    border-radius: 5px;
+    @include transition(.3s all);
+	&:hover{
+		color: $white;
+	}
+	&:focus{
+		outline: 0;
+		box-shadow: 0 0 0;
+	}
+	&--primary{
+		background: $primary_color;
+		&:hover{
+			background: $secondary_color;
+		}
+	}
+	&--primary-outline{
+		background: transparent;
+		border: 1px solid $primary_color;
+		color: $primary_color;
+		&:hover{
+			color: $white;
+			background: $secondary_color;
+			border-color: $secondary_color;
+		}
+	}
+	&--secondary{
+		background: $secondary_color;
+		&:hover{
+			background: $primary_color;
+		}
+	}
+}
+
+::-moz-selection{
+  color: $white;
+  background: $primary_color;
+}
+
+::selection {
+  color: $white;
+  background: $primary_color;
+}

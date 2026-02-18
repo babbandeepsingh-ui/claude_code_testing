@@ -1,0 +1,39 @@
+@mixin transition($property){
+	transition: $property;
+	-ms-transition: $property;
+	-webkit-transition: $property;
+}
+
+@mixin bgimagecover{
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+@mixin bgimagecontain{
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+@mixin fontawesome{
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+}
+
+@mixin centerdiv{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}
+
+@mixin select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("/images/down-arrow.svg");
+    background-repeat: no-repeat;
+    background-position-x: 97%;
+}

@@ -1,0 +1,51 @@
+.discover-identify-banner{
+    width: 100%;
+    background-image: url(/images/background_image-discover.jpg);
+    @include bgimagecover;
+    position: relative;
+    .content-box{
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        text-align: center;
+        width: 50%;
+        .title{
+            margin-bottom: 25px;
+        }
+        p{
+            font-weight: 300;
+            line-height: 1.8;
+        }
+        .subtitle{
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+        .btn{
+            span{
+                display: block;
+                margin-top: 10px;
+                font-size: 14px;
+                color: $light_color;
+            }
+            img{
+                margin: 0;
+            }
+        }
+    }
+    .banner-bottom{
+        position: absolute;
+        @include centerdiv;
+        top: 92%;
+        @extend %poppins;
+        .btn{
+            padding: 0;
+            animation: mover .7s infinite  alternate;
+            -webkit-animation: mover .7s infinite  alternate;
+            font-size: 12px;
+        }
+        span{
+            display: block;
+            margin-top: 10px;
+        }
+    }
+}
