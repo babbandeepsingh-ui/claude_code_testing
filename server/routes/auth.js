@@ -14,40 +14,6 @@ const generateToken = (id) => {
 // In-memory OTP store (use Redis in production)
 const otpStore = new Map();
 
-// POST /api/auth/register
-router.post('/register', async (req, res) => {
-  try {
-    const { name, email, password } = req.body;
-
-    if (!name || !name.trim()) {
-      return res.status(400).json({ message: 'Name is required' });
-    }
-    if (!email || !email.trim()) {
-      return res.status(400).json({ message: 'Email is required' });
-    }
-    if (!password || password.length < 6) {
-      return res.status(400).json({ message: 'Password must be at least 6 characters' });
-    }
-
-    const existingUser = await User.findOne({ where: { email: email.trim() } });
-    if (existingUser) {
-      return res.status(400).json({ message: 'User already exists' });
-    }
-
-    const user = await User.create({ name: name.trim(), email: email.trim(), password });
-
-    res.status(201).json({
-      id: user.id,
-      name: user.name,
-      email: user.email,
-      role: user.role,
-      token: generateToken(user.id),
-    });
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
-});
-
 // POST /api/auth/send-otp
 router.post('/send-otp', async (req, res) => {
   try {
@@ -117,13 +83,11 @@ router.post('/verify-otp', async (req, res) => {
       });
     }
 
-    // New user - register
-    if (!name) {
-      return res.status(400).json({ message: 'Name is required for new registration' });
-    }
+    // New user — auto-register with a default name derived from the phone number
+    const defaultName = name || `User ${phone.replace(/\D/g, '').slice(-4)}`;
 
     user = await User.create({
-      name,
+      name: defaultName,
       phone,
       authProvider: 'phone',
     });
@@ -204,28 +168,6 @@ router.post('/sso/google', async (req, res) => {
     });
 
     res.status(201).json({
-      id: user.id,
-      name: user.name,
-      email: user.email,
-      role: user.role,
-      token: generateToken(user.id),
-    });
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
-});
-
-// POST /api/auth/login
-router.post('/login', async (req, res) => {
-  try {
-    const { email, password } = req.body;
-
-    const user = await User.findOne({ where: { email } });
-    if (!user || !(await user.matchPassword(password))) {
-      return res.status(401).json({ message: 'Invalid email or password' });
-    }
-
-    res.json({
       id: user.id,
       name: user.name,
       email: user.email,

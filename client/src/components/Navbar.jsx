@@ -60,10 +60,7 @@ const Navbar = () => {
                 )}
               </div>
             ) : (
-              <div className="flex items-center space-x-3">
-                <Link to="/login" className="text-gray-600 hover:text-indigo-600 transition text-sm">Login</Link>
-                <Link to="/register" className="bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-indigo-700 transition">Sign Up</Link>
-              </div>
+              <Link to="/login" className="bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-indigo-700 transition">Sign In</Link>
             )}
           </div>
 
@@ -92,10 +89,7 @@ const Navbar = () => {
               <button onClick={() => { handleLogout(); setMenuOpen(false); }} className="block py-2 text-red-600">Logout</button>
             </>
           ) : (
-            <>
-              <Link to="/login" onClick={() => setMenuOpen(false)} className="block py-2 text-gray-600">Login</Link>
-              <Link to="/register" onClick={() => setMenuOpen(false)} className="block py-2 text-indigo-600">Sign Up</Link>
-            </>
+            <Link to="/login" onClick={() => setMenuOpen(false)} className="block py-2 text-indigo-600 font-medium">Sign In</Link>
           )}
         </div>
       )}

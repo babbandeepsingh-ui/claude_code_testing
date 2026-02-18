@@ -17,20 +17,6 @@ export const AuthProvider = ({ children }) => {
     setLoading(false);
   }, []);
 
-  const login = async (email, password) => {
-    const { data } = await API.post('/auth/login', { email, password });
-    setUser(data);
-    localStorage.setItem('user', JSON.stringify(data));
-    return data;
-  };
-
-  const register = async (name, email, password) => {
-    const { data } = await API.post('/auth/register', { name, email, password });
-    setUser(data);
-    localStorage.setItem('user', JSON.stringify(data));
-    return data;
-  };
-
   const sendOtp = async (phone) => {
     const { data } = await API.post('/auth/send-otp', { phone });
     return data;
@@ -67,7 +53,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, loading, login, register, sendOtp, verifyOtp, googleSSO, logout, updateProfile }}>
+    <AuthContext.Provider value={{ user, loading, sendOtp, verifyOtp, googleSSO, logout, updateProfile }}>
       {children}
     </AuthContext.Provider>
   );

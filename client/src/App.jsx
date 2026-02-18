@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -9,7 +9,6 @@ import Products from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
 import Profile from './pages/Profile';
 import Login from './pages/Login';
-import Register from './pages/Register';
 import Dashboard from './pages/admin/Dashboard';
 import ProductList from './pages/admin/ProductList';
 import ProductForm from './pages/admin/ProductForm';
@@ -27,7 +26,7 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<ProductDetail />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/register" element={<Navigate to="/login" replace />} />
 
           <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
 
