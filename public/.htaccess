@@ -1,0 +1,23 @@
+Header always set Content-Security-Policy "default-src 'self' maxcdn.bootstrapcdn.com *.maxcdn.bootstrapcdn.com ajax.googleapis.com *.ajax.googleapis.com google.com *.google.com cdnjs.cloudflare.com *.cdnjs.cloudflare.com ajax.googleapis.com *.ajax.googleapis.com; \
+ font-src *;img-src * data:; script-src 'unsafe-inline' 'unsafe-eval' http: https: ; style-src * 'unsafe-inline'; media-src *; frame-src *;
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Send Requests To Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>

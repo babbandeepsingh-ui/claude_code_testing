@@ -1,0 +1,649 @@
+.investor-relation-section{
+    @extend %commonCircles;
+    &-inner{
+        padding: 70px 0;
+        @extend %containerWidth;
+        padding-bottom: 30px;
+    }
+    .title-section{
+        .title{
+            font-size: 60px;
+            font-weight: 700;
+            color: $black;
+            margin-bottom: 70px;
+            @extend %poppins;
+        }
+    }
+    .section-box{
+        display: flex;
+        flex-wrap: wrap;
+        .box{
+            .title{
+                @extend %title_style_1;
+                margin-bottom: 15px;
+            }
+        }
+        .left-section{
+            width: 55%;
+        }
+        .right-section{
+            width: 40%;
+        }
+    }
+    .section1 {
+        margin-bottom: 90px;
+        .box{
+            .btn{
+                border-radius: 0;
+                @extend %poppins;
+                letter-spacing: 1px;
+                padding: 16px 30px;
+                font-weight: 400;
+            }
+        }
+        .left-section{
+            padding-right: 50px;
+            padding-top: 40px;
+            .title{
+                font-size: 44px;
+            }
+            p{
+                @extend %poppins;
+                font-size: 18px;
+                margin-bottom: 50px;
+                line-height: 1.8;
+            }
+        }
+        .right-section{
+            &-inner{
+                background-image: url(/images/market-image.png);
+                @include bgimagecover;
+                padding: 40px;
+            }
+            .title{
+                font-size: 30px;
+                color: $white;
+            }
+            .stock-list{
+                margin-top: 60px;
+                &-item{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    color: $white;
+                    margin-bottom: 40px;
+                    border-bottom: 2px solid rgb(255 255 255 / 35%);
+                    padding-bottom: 40px;
+                    &:last-child{
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+                        border-bottom: none
+                    }
+                    .name{
+                        @extend %poppins;
+                        font-size: 24px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+    .section2{
+        justify-content: space-between;
+        .box{
+            width: 50%;
+            &-inner{
+                padding: 30px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .top-section{
+                margin-bottom: 90px;
+            }
+            .title{
+                @extend %poppins;
+                font-size: 32px;
+                font-weight: 600;
+                line-height: 1.4;
+                margin-bottom: 10px;
+                span{
+                    display: block;
+                }
+            }
+            .date{
+                padding: 5px 10px;
+                font-size: 16px;
+                font-weight: 500;
+                display: inline-block;
+                border-radius: 3px;
+            }
+            .pdf-btn{
+                font-size: 15px;
+                letter-spacing: 1px;
+                font-weight: 400;
+                @extend %poppins;
+                span{
+                    display: inline-block;
+                    margin-right: 5px;
+                    @include transition(.3s all);
+                }
+                svg{
+                    height: 12px;
+                    @include transition(.3s all);
+                }
+                &:hover{
+                    color: $secondary_color;
+                    svg{
+                        transform: translateX(10px);
+                        .a{
+                            fill: $secondary_color;
+                        }
+                    }
+                }
+            }
+        }
+        .box1{
+            padding-right: 22px;
+            .box-inner{
+                background-image: url(/images/corporate-presentation-image.png);
+                @include bgimagecover;
+            }
+            .title,.pdf-btn{
+                color: $white;
+            }
+            .date{
+                background: $white;
+                color: $primary_color;
+            }
+        }
+        .box2{
+            .box-inner{
+                background-color: #f5f5f5;
+                background-image: url(/images/annual_report.png);
+                @include bgimagecontain;
+            }
+            .title{
+                color: $black;
+            }
+            .date{
+                background: $primary_color;
+                color: $white;
+            }
+            .pdf-btn{
+                color: $primary_color;
+                font-weight: 500;
+                svg .a{
+                    fill: $primary_color;
+                }
+            }
+        }
+    }
+    .section3{
+        @extend .section2;
+        margin-top: 22px;
+        .box{
+            width: 32%;
+            .title{
+                color: $white;
+                margin-bottom: 0;
+            }
+            .pdf-btn{
+                color: $white;
+            }
+            &-inner{
+                @include bgimagecover;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 0;
+                .top-section{
+                    margin-bottom: 0;
+                    width: 100%;
+                    a{
+                        display: block;
+                        padding: 80px 30px;
+                    }
+                }
+            }
+        }
+        .box1{
+            padding-right: 0;
+            .box-inner{
+                background-image: url(/images/ipo_prospectus_image.png);
+            }
+        }
+        .box2{
+            .box-inner{
+                background-image: url(/images/press_release-1.png);
+                background-size: cover;
+                svg .a{
+                    fill: $white;
+                }
+            }
+            .title{
+                color: $white;
+            }
+        }
+        .box3{
+            .box-inner{
+                background-image: url(/images/press_release.png);
+            }
+        }
+    }
+}
+
+.financial-details-section{
+    &-inner{
+        padding: 70px 0;
+        @extend %containerWidth;
+    }
+    .title{
+        @extend %title_style_1;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .nav-pills{
+        justify-content: center;
+        border-bottom: 1px solid $border_color;
+        .nav-item{
+            margin: 0 30px;
+            .nav-link{
+                font-size: 22px;
+                font-weight: 500;
+                @extend %poppins;
+                text-transform: uppercase;
+                color: $color7;
+                padding: 10px 0;
+                position: relative;
+                &.active{
+                    background: transparent;
+                    border-radius: 0;
+                    font-weight: 600;
+                    color: $primary_color;
+                    &:after{
+                        background: $primary_color;
+                    }
+                }
+                &:after{
+                    content: '';
+                    width: 100%;
+                    height: 3px;
+                    background: transparent;
+                    position: absolute;
+                    bottom: -2px;
+                    left: 0;
+                }
+            }
+        }
+        &.child-pills{
+            border-bottom: none;
+            .nav-item{
+                margin: 0 10px;
+                .nav-link{
+                    padding: 16px 17px;
+                    background: $light_color;
+                    color: $black;
+                    text-transform: capitalize;
+                    font-weight: 500;
+                    &:after{
+                        display: none;
+                    }
+                    &.active{
+                        background: $primary_color;
+                        color: $white;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+    .tab-content{
+        max-width: 1035px;
+        margin: 60px auto 20px;
+        .download-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            li{
+                width: 43%;
+                position: relative;
+                margin-bottom: 30px;
+                border-bottom: 1px solid $border_color;
+                padding-bottom: 30px;
+                &:after {
+                    content: "";
+                    background-image: url(/images/download_ic.svg);
+                    @include bgimagecontain;
+                    position: absolute;
+                    right: 15px;
+                    top: -15px;
+                    width: 48px;
+                    height: 48px;
+                    z-index: -1;
+                }
+                a{
+                    color: $black;
+                    font-size: 20px;
+                    font-weight: 600;
+                    display: block;
+                    padding-right: 70px;
+                    span{
+                        display: block;
+                    }
+                }
+                &:last-child,&:nth-last-child(2){
+                    border-bottom: none;
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &-child{
+            margin-top: 90px;
+        }
+    }
+}
+
+.exchange-announcements-section{
+    background: $primary_color_light;
+    &-inner{
+        padding: 70px 0;
+        @extend %containerWidth;
+    }
+    .title{
+        color: $white;
+        text-align: center;
+        @extend %title_style_1;
+        @extend %poppins;
+        font-weight: 700;
+    }
+    .content-box{
+        margin-top: 70px;
+        @extend %poppins;
+        &-section{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .box{
+            width: 48%;
+            &-inner{
+                background: $white;
+                height: 100%;
+            }
+            .title-filter {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 30px;
+                .title{
+                    font-size: 24px;
+                    font-weight: 500;
+                    color: $black;
+                    margin-bottom: 0;
+                    width: 80%;
+                    text-align: left;
+                }
+                .filter{
+                    &-event{
+                        background: $light_color;
+                        padding: 5px 30px 5px 20px;
+                        border-radius: 100px;
+                        font-weight: 600;
+                        @extend %poppins;
+                        font-size: 18px;
+                        outline: 0;
+                        border: 0;
+                        color: $primary_color;
+                        cursor: pointer;
+                        @include select;
+                        background-position-x: 85%;
+                        background-position-y: 45%;
+                        background-size: 15%;
+                        &:focus{
+                            outline: 0;
+                        }
+                    }
+                }
+            }
+            .box-section{
+                padding: 10px 30px 30px;
+                height: 400px;
+                overflow-y: scroll;
+            }
+            .box-item{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid $border_color;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+                &.hidden{
+                    display: none;
+                }
+                .image{
+                    width: 40px;
+                }
+                .content{
+                    max-width: 88%;
+                }
+                .text{
+                    font-size: 18px;
+                    color: $black;
+                }
+                .date{
+                    display: inline-block;
+                    margin-bottom: 7px;
+                    color: $black_light;
+                }
+            }
+        }
+        
+        ::-webkit-scrollbar-track
+        {
+            border-radius: 0;
+            background-color: $border_color;
+        }
+
+        ::-webkit-scrollbar
+        {
+            width: 6px;
+            background-color: $border_color;
+        }
+
+        ::-webkit-scrollbar-thumb
+        {
+            border-radius: 100px;
+            background-color: $color7;
+        }
+    }
+}
+
+.ir-section4{
+    background: $light_color;
+    padding: 70px 0;
+    .section-box{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .box{
+            width: 32%;
+            &-inner{
+                @include bgimagecover;
+                padding: 30px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .top-section{
+                margin-bottom: 90px;
+            }
+            .title{
+                @extend %poppins;
+                font-size: 32px;
+                font-weight: 600;
+                line-height: 1.4;
+                margin-bottom: 10px;
+                color: $white;
+                span{
+                    display: block;
+                }
+            }
+            .pdf-btn{
+                font-size: 15px;
+                letter-spacing: 1px;
+                font-weight: 400;
+                color: $white;
+                span{
+                    display: inline-block;
+                    margin-right: 5px;
+                }
+                svg{
+                    height: 12px;
+                    @include transition(.3s all);
+                }
+                &:hover{
+                    svg{
+                        transform: translateX(10px);
+                    }
+                }
+            }
+        }
+        .box1{
+            padding-right: 0;
+            .box-inner{
+                background-image: url(/images/corporate_presentation.png);
+            }
+        }
+        .box2{
+            .box-inner{
+                background-image: url(/images/shareholders_agm.png);
+            }
+        }
+        .box3{
+            .box-inner{
+                background-image: url(/images/corporate_actions.png);
+            }
+        }
+    }
+}
+
+.investor-faqs-section{
+    padding: 70px 15px;
+    @extend %poppins;
+    &-inner{
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .title{
+        text-align: center;
+        @extend %title_style_1;
+        margin-bottom: 30px;
+    }
+    .accordion{
+        .accordion-header button{
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.6;
+            max-width: 90%;
+            &:after {
+                position: absolute;
+                right: -70px;
+                top: 17px;
+                content: '\f055';
+                @include fontawesome;
+                background-image: none;
+            }
+        }
+        .accordion-button:not(.collapsed)::after{
+            transform: rotate(0);
+            content: '\f056';
+        }
+        .accordion-body{
+            font-size: 20px;
+            max-width: 90%;
+            p:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.irc-section{
+    padding: 0 100px 70px;
+    &-inner{
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .title{
+        text-align: center;
+        @extend %title_style_1;
+        margin-bottom: 60px;
+    }
+    .box-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .box{
+            width: 48%;
+            border-right: 1px solid $border_color;
+            &:last-child{
+                border-right: none;
+            }
+            &-inner{
+                border-bottom: 1px solid $border_color;
+                padding-bottom: 20px;
+                margin-bottom: 40px;
+                &:last-child{
+                    border-bottom: none;
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .title{
+            text-align: left;
+            font-size: 22px;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            span{
+                display: block;
+            }
+        }
+        .box-item{
+            @extend %poppins;
+            margin-bottom: 15px;
+            .name{
+                font-size: 20px;
+                color: $black;
+                line-height: 1.5;
+                margin-bottom: 0;
+            }
+            .name2{
+                margin-bottom: 5px;
+            }
+            span{
+                display: block;
+            }
+            .text{
+                display: block;
+                line-height: 1.8;
+                color: $black;
+            }
+            .text.text2 {
+                margin-top: 10px;
+                font-weight: 500;
+            }
+            a{
+                color: $primary_color;
+                &:hover{
+                    color: $secondary_color;
+                }
+            }
+        }
+    }
+}

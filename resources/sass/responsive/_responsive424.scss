@@ -1,0 +1,17 @@
+@media only screen and (max-width: 424px){
+    .investor-relation-section .section1 .right-section-inner {
+        padding: 20px;
+        .btn{
+            width: 100%;
+        }
+        .stock-list-item {
+            flex-direction: column;
+        }
+    }
+    
+}
+@media only screen and (max-width: 374px){
+    .ad-solution-section .title-section .title{
+        font-size: 26px;
+    }
+}

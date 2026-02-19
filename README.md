@@ -1,169 +1,61 @@
-# ShopHub - E-commerce Store
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-A full-featured e-commerce web application built with React, Express, and MySQL.
+<p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+</p>
 
-## Tech Stack
+## About Laravel
 
-**Frontend:** React 18, Vite, Tailwind CSS, React Router DOM, Axios, React Hot Toast
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-**Backend:** Express, Sequelize ORM, MySQL, JWT Authentication, bcryptjs
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-**Payments:** PayPal Integration
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Features
+## Learning Laravel
 
-- Product browsing with search, filtering, and pagination
-- Product detail pages with reviews and ratings
-- User authentication (Email, Phone OTP, Google SSO)
-- User profile management
-- Admin dashboard with product, category, and user management
-- Image uploads
-- PayPal checkout integration
-- Role-based access control (User / Admin)
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-## Project Structure
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-```
-├── client/                 # React frontend (Vite)
-│   ├── src/
-│   │   ├── api/            # Axios configuration
-│   │   ├── components/     # Reusable components
-│   │   ├── context/        # React Context (Auth)
-│   │   └── pages/          # Page components
-│   │       └── admin/      # Admin pages
-│   └── .env                # Client environment variables
-│
-├── server/                 # Express backend
-│   ├── config/             # Database configuration
-│   ├── middleware/          # Auth & admin middleware
-│   ├── models/             # Sequelize models
-│   ├── routes/             # API routes
-│   ├── seeders/            # Database seed data
-│   └── .env                # Server environment variables
-│
-└── package.json            # Root scripts (concurrently)
-```
+## Laravel Sponsors
 
-## Prerequisites
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-- Node.js (v16+)
-- MySQL
+### Premium Partners
 
-## Setup
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Cubet Techno Labs](https://cubettech.com)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[Many](https://www.many.co.uk)**
+- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
+- **[DevSquad](https://devsquad.com)**
+- **[OP.GG](https://op.gg)**
 
-### 1. Clone and install dependencies
+## Contributing
 
-```bash
-npm run install-all
-```
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-This installs dependencies for the root, server, and client.
+## Code of Conduct
 
-### 2. Configure environment variables
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-**Server** (`server/.env`):
+## Security Vulnerabilities
 
-```env
-PORT=5000
-DB_HOST=localhost
-DB_USER=your_db_user
-DB_PASSWORD=your_db_password
-DB_NAME=claude_ecommerce
-JWT_SECRET=your_jwt_secret_key
-PAYPAL_CLIENT_ID=your_paypal_client_id
-PAYPAL_CLIENT_SECRET=your_paypal_client_secret
-```
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-**Client** (`client/.env`):
+## License
 
-```env
-VITE_GOOGLE_CLIENT_ID=your_google_client_id
-```
-
-### 3. Create the MySQL database
-
-```sql
-CREATE DATABASE claude_ecommerce;
-```
-
-Tables are auto-created by Sequelize on server start.
-
-### 4. Seed the database (optional)
-
-```bash
-npm run seed
-```
-
-This populates the database with sample categories, products, and demo user accounts.
-
-### 5. Start development servers
-
-```bash
-npm run dev
-```
-
-This runs both the backend (port 5000) and frontend (port 3000) concurrently.
-
-## Demo Credentials
-
-After running `npm run seed`, you can log in with the following accounts:
-
-| Role  | Email               | Password      |
-| ----- | ------------------- | ------------- |
-| Admin | admin@example.com   | admin123      |
-| User  | john@example.com    | password123   |
-
-> The **Admin** account has access to the admin dashboard for managing products, categories, and users.
-
-## API Endpoints
-
-### Auth
-
-| Method | Endpoint              | Description                    |
-| ------ | --------------------- | ------------------------------ |
-| POST   | `/api/auth/register`  | Register with email & password |
-| POST   | `/api/auth/login`     | Login with email & password    |
-| POST   | `/api/auth/send-otp`  | Send OTP to phone number       |
-| POST   | `/api/auth/verify-otp`| Verify OTP & register/login    |
-| POST   | `/api/auth/sso/google`| Google SSO sign-in             |
-| GET    | `/api/auth/me`        | Get current user (protected)   |
-| PUT    | `/api/auth/profile`   | Update profile (protected)     |
-
-### Products
-
-| Method | Endpoint              | Description              |
-| ------ | --------------------- | ------------------------ |
-| GET    | `/api/products`       | List products            |
-| GET    | `/api/products/:id`   | Get product details      |
-| POST   | `/api/products`       | Create product (admin)   |
-| PUT    | `/api/products/:id`   | Update product (admin)   |
-| DELETE | `/api/products/:id`   | Delete product (admin)   |
-
-### Categories
-
-| Method | Endpoint              | Description               |
-| ------ | --------------------- | ------------------------- |
-| GET    | `/api/categories`     | List categories           |
-| POST   | `/api/categories`     | Create category (admin)   |
-| PUT    | `/api/categories/:id` | Update category (admin)   |
-| DELETE | `/api/categories/:id` | Delete category (admin)   |
-
-### Users (Admin)
-
-| Method | Endpoint          | Description            |
-| ------ | ----------------- | ---------------------- |
-| GET    | `/api/users`      | List all users (admin) |
-| DELETE | `/api/users/:id`  | Delete user (admin)    |
-
-## Google SSO Setup
-
-1. Go to [Google Cloud Console](https://console.cloud.google.com/)
-2. Create a new project or select existing
-3. Navigate to **APIs & Credentials** > **Create Credentials** > **OAuth Client ID**
-4. Application type: **Web application**
-5. Add `http://localhost:5173` to **Authorized JavaScript Origins**
-6. Copy the Client ID into `client/.env`
-
-## OTP Note
-
-Phone OTP codes are currently logged to the server console. For production, integrate an SMS provider like Twilio.
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

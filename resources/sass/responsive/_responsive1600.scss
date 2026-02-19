@@ -1,0 +1,25 @@
+@media only screen and (min-width: 1600px){
+    %containerWidth{
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .image-text-section-inner .content-box,.discover-identify-banner .content-box{
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+    .image-text-section-inner .content-box .box1,.image-text-section-alternative .image-text-section-inner:nth-child(even) .content-box .box1{
+        padding: 80px 0;
+    }
+
+    .banner-section-inner {
+        display: block;
+        height: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        position: relative;
+        .content-box{
+            width: 50%;
+        }
+    }
+}

@@ -1,0 +1,86 @@
+.digital-transformation-banner{
+    background-image: url(/images/digital-transformation-image.jpg);
+    .content-box{
+        width: 60%;
+        p{
+            margin-bottom: 20px;
+        }
+        .btn{
+            padding: 16px 40px;
+        }
+    }
+}
+
+.digital-transformation-section2{
+    .box-section .box{
+        .title{
+            margin-bottom: 15px;
+        }
+        p{
+            @extend %poppins;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.digital-transformation-section3{
+    .image-text-section-inner{
+        background: $light_color;
+        .content-box{
+            flex-direction: row-reverse;
+            .box1{
+                padding: 80px 130px 80px 15px;
+            }
+        }
+        &:nth-child(even){
+            background: $white;
+            .content-box{
+                flex-direction: row;
+                .box1{
+                    padding: 80px 15px 80px 130px;
+                }
+            }
+        }
+        .head-icon{
+            margin-bottom: 0;
+            .title{
+                margin-bottom: 10px;
+                font-size: 22px;
+                color: $primary_color;
+                font-weight: 600;
+            }
+        }
+    }
+    
+    .bottom-section{
+        margin-top: 15px;
+    }
+    .pdf-btn{
+        font-size: 18px;
+        font-weight: 400;
+        @extend %poppins;
+        color: $primary_color;
+        span{
+            display: inline-block;
+            margin-right: 5px;
+            @include transition(.3s all);
+        }
+        svg{
+            height: 12px;
+            @include transition(.3s all);
+            .a{
+                fill: $primary_color;
+            }
+        }
+        &:hover{
+            color: $secondary_color;
+            svg{
+                transform: translateX(10px);
+                .a{
+                    fill: $secondary_color;
+                }
+            }
+        }
+    }
+}

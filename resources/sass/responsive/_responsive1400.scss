@@ -1,0 +1,10 @@
+@media only screen and (max-width: 1420px){
+    .banner-section .content-box{
+        .title span,p span {
+            display: inline;
+        }
+    }
+    .ad-solution-section .title-section .title span,.image-text-section-inner .content-box .title span{
+        display: inline;
+    }
+}

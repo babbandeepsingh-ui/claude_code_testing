@@ -1,0 +1,241 @@
+@media only screen and (max-width: 600px){
+    .banner-section {
+        background-position: right;
+        padding-bottom: 100%;
+    }
+    %title_style_1 {
+        font-size: 26px;
+    }
+    .about-section1 .stats-box {
+        flex-direction: column;
+        .stats-item{
+            margin-right: 0;
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 2px solid $light_color;
+            padding-bottom: 20px;
+            &:after{
+                display: none;
+            }
+            &:last-child{
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+        }
+    }
+    .product-milestone-inner{
+        height: 700px;
+        &:before{
+            display: none;
+        }
+    }
+    .management-section{
+        .members-list-item {
+            width: 100%;
+        }
+        .title-text{
+            margin: 15px 0;
+        }
+    }
+    .our-business-section .advertisers-box{
+        .text-section .title {
+            font-size: 20px;
+        }
+        .image-section .logo-item {
+            width: 100%;
+        }
+    }
+    .popup-content iframe {
+        max-width: 90%;
+        height: 220px;
+    }
+    .affle-life-section .image-box-inner .play-btn{
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+    }
+    .address-location-section .address-box-item {
+        width: 100%;
+        padding: 15px 15px 30px;
+        .image img{
+            width: 100%;
+        }
+    }
+    .contact-section1-inner .form-section .contact-form-inner .form-group {
+        width: 100%;
+    }
+    .investor-faqs-section .accordion .accordion-header button:after {
+        right: -40px;
+    }
+    .management-section .modal-content{
+        margin-top: 0;
+        margin-bottom: 0;
+        &-inner {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            .image-box {
+                padding: 20px;
+                align-items: center;
+                justify-content: center;
+                .name {
+                    margin-top: 5px;
+                }
+                .position {
+                    margin-bottom: 10px;
+                }
+            }
+            .content {
+                padding: 20px;
+            }
+        }
+        .close-btn {
+            position: absolute;
+            right: 20px;
+            top: -10px;
+        }        
+    }
+    .discover-identify-banner .content-box p {
+        margin-bottom: 20px;
+    }
+    .image-text-section-inner .content-box{
+        .title{
+            font-size: 24px;
+        }
+        .list .list-item {
+            margin-bottom: 30px;
+            width: 100%;
+        }
+    }
+    .culture-section .box-section .box {
+        padding: 0;
+        margin-bottom: 50px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    .office-address .office-address-list .nav-item {
+        width: 100%;
+    }
+    .exchange-announcements-section .content-box .box .title-filter {
+        flex-wrap: wrap;
+        .title{
+            width: 100%;
+            margin-bottom: 15px;
+        }
+    }
+    .irc-section{
+        padding-bottom: 0;
+    }
+    .investor-faqs-section .accordion .accordion-header button {
+        line-height: 1.4;
+    }
+    .about-us-india-section-inner {
+        padding-top: 70px;
+    }
+    .about-us-india-section3-inner .box-inner .box-content a {
+        min-height: 250px;
+    }
+    .blog-list .blog-item {
+        width: 100%;
+        .blog-image{
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .blog-page-section{
+        .content-section .title-filter{
+            .title {
+                font-size: 36px;
+                width: 40%;
+            }
+            .filter-event{
+                width: 40%;
+            }
+        }
+    }
+    .blogdetail-page-section{
+        .content .blog-other .author-box {
+            max-width: 100%;
+        }
+        .content .blog-other .blog-analy{
+            .list-item {
+                margin-right: 15px;
+            }
+            .list .text {
+                font-size: 13px;
+                font-weight: 400;
+            }
+        }
+        .form-section .comment-form .basic-fields .form-group {
+            width: 100%;
+        }
+    }
+    .post-section .blog-list .blog-item,.blog-page-section.author-section-2 .content-section .title-filter .title {
+        width: 100%;
+    }
+    .author-section-1{
+        &-inner{
+            padding-bottom: 50px;
+        }
+        .profile {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+        }
+    }
+    .thankyou-page .thankyou-section-inner{
+        .content{
+            margin-bottom: 70px;
+        }
+        .content-bottom-inner {
+            flex-direction: column;
+            .text{
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .ad-solution-section .box-section .box-inner .image {
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    .footer-section .footer-section-social a {
+        margin-right: 20px;
+    }
+    .quick-btn {
+        width: 70px;
+    }
+    .financial-details-section{
+        .nav-pills{
+              justify-content: center;
+              border-bottom: 1px solid $border_color;
+              
+               &.child-pills{
+                  border-bottom: none;
+                  .nav-item{
+                      margin: 11px 6px;
+                      
+                  }
+              }
+          }
+        }
+
+        .investor-relation-section .section1 .box .btn{
+            &:hover{
+                background: $secondary_color;
+            }
+        }
+
+        .work-place-section{
+            .desktop-image{
+                display: none;
+            }
+            .mobile-image{
+                display: block;
+            }
+        }
+}
+
