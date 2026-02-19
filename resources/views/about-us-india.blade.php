@@ -8,6 +8,7 @@
             <span>Investor</span><span> Menu</span>
         </div>
     </div>
+
     @include('inc.investor-menu')
 
     <section class="about-us-india-section innerpage-padding">
